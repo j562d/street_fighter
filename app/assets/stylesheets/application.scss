@@ -1,0 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require rails_bootstrap_forms
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.navbar-brand {
+  background-color: rgba(0,0,0, .4)
+}
+
+
+  body {
+    padding-top:60px;
+    background-image: url('http://i.imgur.com/uHTNhZF.png');
+   }
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.posted {
+  font-size: 15px;
+
+}
+
+.title {
+  font-size: 35px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.comment_form {
+  color: black;
+}
+
+.main {
+  color: white;
+}
+
+.main , .single {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  background-color: rgba(0,0,0, .4)
+}
+
+a:visited, .navbar-right {
+  color: pink;
+}
+
+.show {
+  float: left;
+}
+
+.sorted {
+  text-align: right;
+}
+
+.postedby {
+  font-size: 15px;
+}
+
+.card {
+  background-color: white;
+
+}
+
+.style_image {
+  height: 100px;
+  width: 100px;
+  border: 5px solid black;
+}
+
+.style_gif {
+  height: 200px;
+  width: 300px;
+}
+
+label {
+  display: block;
+  width: 3em;
+  margin-right: 1em;
+
+}
+
+
+
+.panel {
+  background-color: rgba(0,0,0, .4)
+}
+
+.panel-heading {
+    background-color: rgba(0,0,0, .6)
+}
+
+.card-block {
+  color: black;
+  margin: 20px 20px 20px 20px;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.navbar-nav {
+  padding-left:50px;
+  padding-right:50px;
+}
