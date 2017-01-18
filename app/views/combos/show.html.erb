@@ -44,6 +44,7 @@
         <div class="card-block">
           <% @combo.comments.each do |e| %>
           <div class="card-text">
+            <br>
             <%= e.content %>
           </div>
         <div class = "postedby">
@@ -67,7 +68,7 @@
         <%= f.text_area :content, placeholder: "Type comment here..." %><br>
         <%= f.submit 'submit new comment' %>
         <% end %>
-      <% end %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -81,4 +82,6 @@
     </button>
   <% end %>
 </div>
+
+
 
