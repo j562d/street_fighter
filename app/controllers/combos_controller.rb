@@ -10,12 +10,10 @@ class CombosController < ApplicationController
       current_user.favorite_combos << @combo unless current_user.favorite_combos.exists?(@combo)
       redirect_to combo_path
       flash[:notice] = "You have FAVORITED"
-
     elsif type =="unfavorite"
       current_user.favorite_combos.delete(@combo)
       redirect_to combo_path
       flash[:notice] = "You have unfavoirted"
-
     else
       redirect_to :back, notice: 'Nothing happened.'
     end
@@ -34,33 +32,28 @@ class CombosController < ApplicationController
   end
 
   def show
-  #@combo = Combo.find(params[:id])
-  @comment = Comment.new
-
+    @comment = Comment.new
   end
-
 
   def new
     @combo = Combo.new
     @comment = Comment.new(combo_id: params[:combo_id])
-#    @options = ["Ryu", "Ken", "Zangief", "M. Bison", "Chun-Li", "Dhalsim"]
+#   @options = ["Ryu", "Ken", "Zangief", "M. Bison", "Chun-Li", "Dhalsim"]
   end
 
   def create
     @combo = current_user.combos.create(combo_params)
-    redirect_to combos_path
+#    redirect_to combos_path
+#  end
+    if @combo.save
+      flash[:success] = "Combo succesfully created"
+      redirect_to combos_path
+    else
+      render :new
+    end
   end
 
-#    if @combo.save
-#      flash[:success] = "Combo succesfully created"
-#      redirect_to combos_path
-#    else
-#      render :new
-#    end
-#  end
-
   def edit
-
   end
 
   def update

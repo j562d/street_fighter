@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
- #   @combo = Combo.new
   end
 
   def new
@@ -23,8 +22,6 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-
-
 
 
   private

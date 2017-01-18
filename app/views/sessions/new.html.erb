@@ -1,28 +1,29 @@
 <h1>Log In</h1>
 
 <div class="container show">
-<div class="col-lg-10">
-<div class="panel panel-default">
-<div class="panel-heading">
-</div>
-    <div class="panel-body single">
-<ul>
+  <div class="col-lg-10">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      </div>
+      <div class="panel-body single">
+        <ul>
 
-<p id="alert"><%= alert %></p>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
+          <p id="alert"><%= alert %></p>
+          <%= form_tag sessions_path do %>
+          <div class="field">
+            <%= label_tag :email %>
+            <%= text_field_tag :email, params[:email] %>
+          </div>
+          <div class="field">
+            <%= label_tag :password %>
+            <%= password_field_tag :password %>
+          </div>
+          <div class="actions">
+            <%= submit_tag "Log In" %>
+          </div>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log In" %></div>
-<% end %>
-
-</ul>
-</div>
-</div>
-</div>
 </div>
