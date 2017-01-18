@@ -1,0 +1,19 @@
+<h1>hi</h1>
+
+
+<div class="container show">
+  <div class="col-lg-10">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      </div>
+      <div class="panel-body single">
+        <ul>
+          Name: <%= @user.name %><br>
+          Email: <%= @user.email %><br><br>
+          <%= link_to "Change your info", edit_user_path(@user) %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -25,7 +25,14 @@
       <br>
       <p>Command:</p>
       <p><%= @combo.command %></p>
-      <%= image_tag(@combo.image.url, :class => "style_gif") %>
+
+      <% if @combo.image.file? %>
+        <%= image_tag(@combo.image.url, :class => "style_gif") %>
+      <% else %>
+        &nbsp;
+      <% end %>
+
+      <%#= image_tag(@combo.image.url, :class => "style_gif") %>
       </ul>
 
       <div class="posted">
