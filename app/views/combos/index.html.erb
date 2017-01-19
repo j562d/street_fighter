@@ -8,7 +8,7 @@
 
   <div class="panel-body main">
     <ul>
-      <% @combos.reverse_each do |combo| %>
+      <% @combos.reverse.each do |combo| %>
         <%= div_for combo, :class => "col-sm-3" do %>
         <p class="title"><%= combo.character %></p>
         <% if  combo.character == "Ryu" %>

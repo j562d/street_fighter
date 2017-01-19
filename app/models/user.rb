@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   has_many :combos, dependent: :destroy
 
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :favorite_combos, through: :favorites, source: :combo
 
   has_many :comments, dependent: :destroy
