@@ -50,10 +50,11 @@
       <% if current_user == @combo.user %>
         <p><%= link_to "Edit this Combo", edit_combo_path(@combo) %></p>
         <br>
-        <%= link_to "DELETE this Combo!", combo_path, method: :delete, data: { confirm: "Are you sure you want to delete this Combo?"} %>
+        <button type="button" class="btn black-background btn-sm">
+        <%= link_to "DELETE THIS COMBO", combo_path, method: :delete, data: { confirm: "Are you sure you want to delete this Combo?"} %>
+        </button>
       <% end %>
-      <br>
-      <p><%= link_to "Go back to all Combos", combos_path %></p>
+
 
       <div class="card">
         <div class="card-block">
@@ -90,13 +91,19 @@
   </div>
 
   <% if current_user %>
-    <button type="button" class="btn btn-info">
-      <%= link_to "favorite",   favorite_combo_path(@combo, type: "favorite"), method: :put %>
+    <button type="button" class="btn btn-success">
+      <%= link_to "Favorite",   favorite_combo_path(@combo, type: "favorite"), method: :put %>
     </button>
-    <button type="button" class="btn btn-info">
-      <%= link_to "unfavorite", favorite_combo_path(@combo, type: "unfavorite"), method: :put %>
+    <button type="button" class="btn btn-danger">
+      <%= link_to "Unfavorite", favorite_combo_path(@combo, type: "unfavorite"), method: :put %>
     </button>
   <% end %>
+  <br>
+  <br>
+  <br>
+  <button type="button" class="btn black-background btn-md">
+<%= link_to "Go back to all Combos", combos_path %>
+</button>
 </div>
 
 

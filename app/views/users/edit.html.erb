@@ -21,16 +21,30 @@
           <%= form.password_field :password %><br>
 
           <%= form.label :password_confirmation %>
-          <%= form.password_field :password_confirmation %><br>
+          <%= form.password_field :password_confirmation %><br><br>
 
-          <%= form.submit 'Edit your account' %>
+          <%= form.submit 'Confirm Changes' %>
           <% end %>
           </div>
+          <br>
+          <br>
         </ul>
-        <button>
-          <%= link_to "DELETE your account", current_user, method: :delete, data: { confirm: "Are you sure you want to delete your account?"} %>
+
       </div>
+      </ul>
     </div>
-    <button><%= link_to "Go back to all Combos", combos_path %></button>
   </div>
+         <button type="button" class="btn black-background btn-md">
+    <%= link_to "Go back to all Combos", combos_path %></button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+            <button type="button" class="btn btn-danger btn-md">
+          <%= link_to "DELETE your account", current_user, method: :delete, data: { confirm: "Are you sure you want to delete your account?"} %>
+          </button>
 </div>
+
+
