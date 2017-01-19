@@ -1,9 +1,12 @@
 <h2>My Favorites</h2>
 
 <div class="container">
-  <div class="panel-heading">
+  <div class="panel-heading sorted">
+    <button type="button" class="btn black-background btn-lg">
+    <%= link_to "Post a New Combo", new_combo_path%>
+    </button>
   </div>
-    <div class="panel-body main">
+  <div class="panel-body main">
     <ul>
     <% @favorites.order("created_at desc").each do |favorite| %>
     <%= div_for favorite, :class => "col-sm-3" do %>
@@ -28,18 +31,23 @@
   <%# end %>
 
 
-      <p><%= favorite.combo.damage %></p>
-      <p><%= favorite.combo.difficulty %></p>
-      <p><%= favorite.combo.character %></p>
+      <p>Damage: <%= favorite.combo.damage %></p>
+      <p>Difficulty: <%= favorite.combo.difficulty %></p>
+      <p>Command</p>
+      <p><%= favorite.combo.command %></p>
         <%#= image_tag(favorite.combo.image.url) %>
+        <button type="button" class="btn black-background btn-sm">
         <p><%= link_to "Click to View Combo", combo_path(favorite.combo) %></p>
+        </button>
         <hr>
         <div class="posted">
-            Posted by <%= favorite.combo.user.name %>
+          Posted by <%= favorite.combo.user.name %><br>
+          on <%= favorite.combo.created_at.localtime.strftime("%m/%d/%Y" " at %I:%M%p") %>
         </div>
         <hr>
       <% end %>
     <% end %>
 </ul>
+</div>
 </div>
 </div>

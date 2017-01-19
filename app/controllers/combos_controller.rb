@@ -9,11 +9,11 @@ class CombosController < ApplicationController
     if type == "favorite"
       current_user.favorite_combos << @combo unless current_user.favorite_combos.exists?(@combo)
       redirect_to combo_path
-      flash[:notice] = "You have FAVORITED"
+      flash[:notice] = "Added to Favorites"
     elsif type =="unfavorite"
       current_user.favorite_combos.delete(@combo)
       redirect_to combo_path
-      flash[:notice] = "You have unfavoirted"
+      flash[:warning] = "Removed from Favorites"
     else
       redirect_to :back, notice: 'Nothing happened.'
     end
