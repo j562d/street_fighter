@@ -10,7 +10,9 @@
         <ul>
           Name: <%= @user.name %><br>
           Email: <%= @user.email %><br><br>
+          <% if current_user == @user %>
           <%= link_to "Change your info", edit_user_path(@user) %>
+          <% end %>
         </ul>
       </div>
     </div>

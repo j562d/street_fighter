@@ -1,15 +1,25 @@
-<h1>Combos</h1>
 
 <div class="container">
   <div class="panel-heading sorted">
-    <%= link_to "Sort by Damage", :sort => 'Damage' %>|
-    <%= link_to "Sort by Difficulty", :sort => 'Difficulty' %>
+    <button type="button" class="btn btn-primary btn-med">
+    <%= link_to "Create Combo", new_combo_path%>
+    </button>
+    <div class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">SORT
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu dropdown-menu-center">
+        <%= link_to "DAMAGE low to high", :sort => 'Damage DESC' %>
+        <%= link_to "DAMAGE high to low", :sort => 'Damage' %>
+        <%#= link_to "Sort by Difficulty", :sort => 'Difficulty' %>
+      </ul>
+    </div>
   </div>
 
   <div class="panel-body main">
     <ul>
-      <% @combos.reverse.each do |combo| %>
+      <% @combos.order("created_at desc").each do |combo| %>
         <%= div_for combo, :class => "col-sm-3" do %>
+
         <p class="title"><%= combo.character %></p>
             <%= character_img(combo) %>
 
@@ -43,7 +53,8 @@
         </button>
         <hr>
         <div class="posted">
-          Posted by <%= combo.user.name %>
+          Posted by <%= combo.user.name %><br>
+          on <%= combo.created_at.localtime.strftime("%m/%d/%Y" " at %I:%M%p") %>
         </div>
 
         <hr>
@@ -52,12 +63,10 @@
     </ul>
   </div>
 
-  <button type="button" class="btn btn-primary btn-lg">
-    <%= link_to "Create Combo", new_combo_path%>
-  </button>
+
 
 </div>
-
+</div>
 
 
 

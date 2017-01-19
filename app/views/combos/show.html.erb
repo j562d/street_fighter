@@ -1,4 +1,4 @@
-<h1>SHOW</h1>
+
 
 <div class="container show">
   <div class="col-lg-10">
@@ -32,18 +32,19 @@
       <p>Command:</p>
       <p><%= @combo.command %></p>
     </div>
-    <div class="gif">
+
       <% if @combo.image.file? %>
         <%= image_tag(@combo.image.url, :class => "style_gif") %>
       <% else %>
         &nbsp;
       <% end %>
-    </div>
+
       <%#= image_tag(@combo.image.url, :class => "style_gif") %>
       </ul>
 
       <div class="posted">
         Posted by <%= @combo.user.name %>
+        on <%= @combo.created_at.localtime.strftime("%m/%d/%Y" " at %I:%M%p") %>
       </div>
 
       <% if current_user == @combo.user %>
@@ -56,13 +57,14 @@
 
       <div class="card">
         <div class="card-block">
-          <% @combo.comments.each do |e| %>
+          <% @combo.comments.order("created_at asc").each do |e| %>
           <div class="card-text">
             <br>
             <%= e.content %>
           </div>
         <div class = "postedby">
           Posted by <%= e.user.name %>
+          on <%= e.created_at.localtime.strftime("%m/%d/%Y" " at %I:%M%p") %>
         </div>
         <hr>
         <% if current_user == e.user %>

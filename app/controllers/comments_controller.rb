@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+before_action :authorize, except: [:show]
 
   def show
     @combo = Combo.find(params[:combo_id])

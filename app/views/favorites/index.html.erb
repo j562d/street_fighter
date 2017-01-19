@@ -1,11 +1,11 @@
 <h1>Favorites</h1>
 
 <div class="container">
-<div class="panel-heading">
-</div>
+  <div class="panel-heading">
+  </div>
     <div class="panel-body main">
     <ul>
-    <% @favorites.each do |favorite| %>
+    <% @favorites.order("created_at desc").each do |favorite| %>
     <%= div_for favorite, :class => "col-sm-3" do %>
       <p class="title"><%= favorite.combo.character %></p>
 
