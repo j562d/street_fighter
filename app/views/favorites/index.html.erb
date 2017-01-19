@@ -8,6 +8,8 @@
     <% @favorites.each do |favorite| %>
     <%= div_for favorite, :class => "col-sm-3" do %>
       <p class="title"><%= favorite.combo.character %></p>
+
+
         <% if  favorite.combo.character == "Ryu" %>
     <%= image_tag 'ryu_avatar.png', :class => "style_image" %>
   <% elsif favorite.combo.character == "Ken" %>
@@ -23,6 +25,8 @@
   <% elsif favorite.combo.character == "Vega" %>
     <%= image_tag 'http://i.imgur.com/rIkEq8b.jpg', :class => "style_image" %>
   <% end %>
+
+
       <p><%= favorite.combo.damage %></p>
       <p><%= favorite.combo.difficulty %></p>
       <p><%= favorite.combo.character %></p>

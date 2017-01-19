@@ -4,6 +4,8 @@
   <div class="col-lg-10">
     <div class="panel-body main">
       <ul>
+      <div class="info">
+    <%#= character_img(@combo) %>
       <% if  @combo.character == "Ryu" %>
         <%= image_tag 'http://i.imgur.com/ycyvEaM.png', :class => "style_image" %>
       <% elsif @combo.character == "Ken" %>
@@ -19,19 +21,22 @@
       <% elsif @combo.character == "Vega" %>
         <%= image_tag 'http://i.imgur.com/rIkEq8b.jpg', :class => "style_image" %>
       <% end %>
+
+
       <p><%= @combo.character %></p>
       <p>Damage:   <%= @combo.damage %></p>
       <p>Difficulty:   <%= @combo.difficulty %></p>
       <br>
       <p>Command:</p>
       <p><%= @combo.command %></p>
-
+    </div>
+    <div class="gif">
       <% if @combo.image.file? %>
         <%= image_tag(@combo.image.url, :class => "style_gif") %>
       <% else %>
         &nbsp;
       <% end %>
-
+    </div>
       <%#= image_tag(@combo.image.url, :class => "style_gif") %>
       </ul>
 
