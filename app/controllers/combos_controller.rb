@@ -54,6 +54,7 @@ class CombosController < ApplicationController
   end
 
   def edit
+    redirect_to combos_path, alert: 'Only the original User can perform this action' if current_user != @combo.user
   end
 
   def update

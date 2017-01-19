@@ -27,6 +27,7 @@ before_action :authorize, except: [:index, :show, :new, :create]
 
   def edit
     @user = User.find(params[:id])
+    redirect_to combos_path, alert: 'Only the original User can perform this action' if current_user != @user
   end
 
   def update
