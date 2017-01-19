@@ -78,7 +78,7 @@
 
       <div class="comment_form">
         <% if current_user %>
-        <%= link_to "Add Comment", new_combo_comment_path(combo_id: @combo.id) %>
+        <%#= link_to "Add Comment", new_combo_comment_path(combo_id: @combo.id) %>
         <%= form_for [@combo, @comment] do |f| %>
         <%#= f.label 'new comment' %>
         <%= f.text_area :content, placeholder: "Type comment here..." %><br>

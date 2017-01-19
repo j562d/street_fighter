@@ -1,17 +1,19 @@
 
 <div class="container">
   <div class="panel-heading sorted">
-    <button type="button" class="btn btn-primary btn-med">
-    <%= link_to "Create Combo", new_combo_path%>
+    <button type="button" class="btn black-background btn-lg">
+    <%= link_to "Post a New Combo", new_combo_path%>
     </button>
     <div class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">SORT
+      <a class="dropdown-toggle" data-toggle="dropdown">
+      <div class="filter">SORT
       <span class="caret"></span></a>
       <ul class="dropdown-menu dropdown-menu-center">
-        <%= link_to "DAMAGE low to high", :sort => 'Damage DESC' %>
-        <%= link_to "DAMAGE high to low", :sort => 'Damage' %>
+        <li><%= link_to "DAMAGE low to high", :sort => 'Damage' %></li>
+        <li><%= link_to "DAMAGE high to low", :sort => 'Damage DESC' %></li>
         <%#= link_to "Sort by Difficulty", :sort => 'Difficulty' %>
       </ul>
+      </div>
     </div>
   </div>
 
@@ -48,7 +50,7 @@
         <br>
         <p>Command: </p>
         <p><%= combo.command %></p>
-        <button type="button" class="btn btn-info btn-md">
+        <button type="button" class="btn black-background btn-sm">
           <p><%= link_to "Click to View Combo", combo_path(combo) %></p>
         </button>
         <hr>

@@ -2,12 +2,30 @@
   background-color: rgba(0,0,0, 1)
 }
 
+.field input {
+    color: black;
+}
 
-  body {
-    padding-top:80px;
-    background-image: url('http://i.imgur.com/uHTNhZF.png');
-   }
+h2 {
+  color: white !important;
+  margin-left: 40px;
+}
 
+body {
+  padding-top:80px;
+  background-image: url('http://i.imgur.com/uHTNhZF.png');
+  color: white;
+
+}
+
+.filter {
+  color: pink;
+  margin-right: 50px;
+}
+
+.sorted {
+  text-align: right;
+}
 
 .dropdown {
     position: relative;
@@ -27,6 +45,11 @@
   font-weight: bold;
 }
 
+
+.comment_form label{
+  color: white;
+}
+
 .comment_form {
   color: black;
 }
@@ -41,7 +64,7 @@
   background-color: rgba(0,0,0, .4)
 }
 
-a:visited, .navbar-right {
+a:visited, a:link, .navbar-right {
   color: pink;
 }
 
@@ -49,9 +72,6 @@ a:visited, .navbar-right {
   float: left;
 }
 
-.sorted {
-  text-align: right;
-}
 
 .postedby {
   font-size: 15px;
@@ -121,6 +141,21 @@ label {
  clear: left;
 }
 
-.btn-med {
-  float: left;
+.btn-lg {
+  text-align: left;
 }
+
+.black-background {
+  background-color: rgba(0,0,0, .5);
+}
+
+.dropdown-menu > li {
+  background-color: white;
+}
+
+.navbar-collapse.collapse {
+display: block!important;
+}
+
+
+

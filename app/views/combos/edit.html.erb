@@ -2,32 +2,29 @@
 
 <div class="container show">
   <div class="col-lg-10">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-      </div>
-      <div class="panel-body single">
-        <ul>
-
+    <div class="panel-body main">
+      <ul>
+      <div class="info comment_form">
           <%= form_for @combo, url: combo_path, html: { multipart: true } do |form| %>
           <%= form.label :character %>
-          <%= form.select :character , ['Ken', 'Ryu', 'Zangief', 'M. Bison', 'Chun-Li', 'Dhalsim', 'Vega'] %> <br>
+          <%= form.select :character, options_for_select(list) %> <br>
 
           <%= form.label :difficulty %>
           <%= form.select :difficulty , ['Beginner', 'Intermediate', 'Advanced'] %><br>
 
           <%= form.label :damage %>
-          <%= form.text_field :damage %><br>
+          <%= form.text_field :damage %><br><br>
 
           <%= form.label :command %>
-          <%= form.text_field :command %><br>
+          <%= form.text_area :command %><br><br>
 
           <%= form.file_field :image %><br><br>
 
           <%= form.submit 'Edit this combo' %>
           <% end %>
+        </div>
         </ul>
       </div>
     </div>
-    <button><%= link_to "Go back to all Combos", combos_path %></button>
+    <button><%= link_to "Cancel edit and go back", @combo %></button>
   </div>
-</div>

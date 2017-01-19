@@ -1,14 +1,13 @@
-<h1>Edit User</h1>
+<h2>Edit Your Account Information</h2>
 
 
 <div class="container show">
   <div class="col-lg-10">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-      </div>
-      <div class="panel-body single">
+    <div class="panel-body main">
+      <ul>
+      <div class="info">
         <ul>
-
+        <div class="comment_form">
           <%= form_for @user do |form| %>
 
 
@@ -26,6 +25,7 @@
 
           <%= form.submit 'Edit your account' %>
           <% end %>
+          </div>
         </ul>
         <button>
           <%= link_to "DELETE your account", current_user, method: :delete, data: { confirm: "Are you sure you want to delete your account?"} %>
