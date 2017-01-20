@@ -1,28 +1,22 @@
-== README
+<h1> Street Fighter V Dojo </h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://sfvdojo.herokuapp.com/
 
-Things you may want to cover:
+This app is a database for the video game Street Fighter V. The purpose of this app is an organized place for people to share combos that they discovered in-game.
+Searching online for this information, you would uncover either long lists of inputs or long Youtube vids.
+I created this app to allow people to pick and choose specific combos to learn and have a visual representation of it.
+Users can upload and share a combo with others, as well as leave comments.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Technologies Used:
+Ruby on Rails
+Boostrap
+Heroku
+Paperclip
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Instructions:
+Users who don't sign-up for an account can only view combos.
+Signing up will allow users access to all of the app's features.
+They can create a combo to share, providing informations such as: character, damage, command, and a .gif
+They can also leave comments on any combo.
+Users can also favorite combos that they like, so they can have easy access to them.

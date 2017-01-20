@@ -4,14 +4,13 @@
     <div class="panel-body main">
       <ul>
       <div class="info comment_form">
-<%= form_for [@combo, @comment] do |f| %>
-  <%= f.label :comment %>
-  <%= f.text_area :content %><br><br>
-  <%= f.submit 'edit comment' %>
-<% end %>
-</div>
-</ul>
-</div>
-</div>
-
+        <%= form_for [@combo, @comment] do |f| %>
+        <%= f.label :comment %>
+        <%= f.text_area :content %><br><br>
+        <%= f.submit 'edit comment' %>
+        <% end %>
+      </div>
+      </ul>
+    </div>
+  </div>
 </div>

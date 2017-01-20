@@ -38,13 +38,10 @@ class CombosController < ApplicationController
   def new
     @combo = Combo.new
     @comment = Comment.new(combo_id: params[:combo_id])
-#   @options = ["Ryu", "Ken", "Zangief", "M. Bison", "Chun-Li", "Dhalsim"]
   end
 
   def create
     @combo = current_user.combos.create(combo_params)
-#    redirect_to combos_path
-#  end
     if @combo.save
       flash[:success] = "Combo succesfully created"
       redirect_to combos_path
@@ -68,9 +65,6 @@ class CombosController < ApplicationController
   def destroy
     @combo.destroy
     redirect_to combos_path
-#   @combo = Combo.find(params[:id])
-#   @combo.destroy if @combo.user == current_user
-#   redirect_to combos_path
   end
 
 

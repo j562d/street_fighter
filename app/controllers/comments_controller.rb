@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+before_action :set_comment, only: [:edit, :update, :destroy]
 before_action :authorize, except: [:show]
 
   def show
@@ -15,15 +16,14 @@ before_action :authorize, except: [:show]
   def create
     @combo = Combo.find(params[:combo_id])
     @comment = @combo.comments.create(comment_params.merge(user_id: current_user.id))
-      redirect_to @combo
+    redirect_to @combo
   end
 
   def edit
-    @comment = Comment.find(params[:id])
+    redirect_to combos_path, alert: 'Only the original User can perform this action' if current_user != @comment.user
   end
 
   def update
-    @comment = Comment.find(params[:id])
     if @comment.update_attributes(comment_params)
       redirect_to combo_path(@comment.combo_id)
     else
@@ -32,7 +32,6 @@ before_action :authorize, except: [:show]
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to combo_path(@comment.combo_id)
   end
@@ -42,4 +41,7 @@ before_action :authorize, except: [:show]
     params.require(:comment).permit(:content)
   end
 
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
 end

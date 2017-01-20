@@ -7,7 +7,7 @@
       <div class="info comment_form">
           <%= form_for @combo, url: combos_path, html: { multipart: true } do |form| %>
           <%= form.label :character %>
-          <%= form.select :character, options_for_select(list) %> <br>
+          <%= form.select :character, options_for_select(list) %><br>
 
           <%= form.label :difficulty %>
           <%= form.select :difficulty , ['Beginner', 'Intermediate', 'Advanced'] %><br>
@@ -22,14 +22,14 @@
 
           <%= form.submit 'Create Post!' %>
           <% end %>
-        </div>
-        </ul>
       </div>
+      </ul>
     </div>
-    <button type="button" class="btn black-background btn-md">
-    <%= link_to "Go back to all Combos", combos_path %>
-    </button>
   </div>
+    <button type="button" class="btn black-background btn-md">
+      <%= link_to "Go back to all Combos", combos_path %>
+    </button>
+</div>
 
 
 

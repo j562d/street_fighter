@@ -2,25 +2,21 @@ Rails.application.routes.draw do
 
   root "combos#index"
 
-
-
   resources :sessions, only: [:new, :create, :destroy]
-
-  resources :combos
-
-  resources :users do
-    resources :combos, shallow: true do
-        resources :comments
-      end
-    end
-
-  resources :users do
-    resources :comments
-  end
 
   resources :combos do
     put :favorite, on: :member
   end
+
+  resources :users do
+    resources :combos, shallow: true do
+      resources :comments
+    end
+    resources :comments
+  end
+
+
+
 
   get "favorites/" => "favorites#index"
 

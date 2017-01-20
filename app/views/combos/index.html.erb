@@ -1,53 +1,44 @@
 
 <div class="container">
+
   <div class="panel-heading sorted">
     <button type="button" class="btn black-background btn-lg">
-    <%= link_to "Post a New Combo", new_combo_path%>
+      <%= link_to "Post a New Combo", new_combo_path%>
     </button>
     <div class="dropdown">
-      <a class="dropdown-toggle filter" data-toggle="dropdown">
-      <div class="filter">SORT
-      <span class="caret"></span></a>
-      <ul class="dropdown-menu dropdown-menu-center">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+      SORT
+    </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <li><%= link_to "DAMAGE low to high", :sort => 'Damage' %></li>
         <li><%= link_to "DAMAGE high to low", :sort => 'Damage DESC' %></li>
-        <%#= link_to "Sort by Difficulty", :sort => 'Difficulty' %>
-      </ul>
       </div>
     </div>
   </div>
 
   <div class="panel-body main">
-    <ul>
-      <% @combos.order("created_at desc").each do |combo| %>
-        <%= div_for combo, :class => "col-md-3" do %>
-
-        <p class="title"><%= combo.character %></p>
-            <%= character_img(combo) %>
-
-        <p>Damage: <%= combo.damage %></p>
-        <p>Difficulty: <%= combo.difficulty %></p>
-        <br>
-        <p>Command: </p>
-        <p><%= combo.command %></p>
-        <button type="button" class="btn black-background btn-sm">
-          <p><%= link_to "Click to View Combo", combo_path(combo) %></p>
-        </button>
-        <hr>
-        <div class="posted">
-          Posted by <%= combo.user.name %><br>
-          on <%= combo.created_at.localtime.strftime("%m/%d/%Y" " at %I:%M%p") %>
-        </div>
-        <hr>
-        <% end %>
-      <% end %>
-    </ul>
+    <% @combos.order("created_at desc").each do |combo| %>
+    <div class="col-md-3 col-sm-3 ">
+      <p class="title"><%= combo.character %></p>
+      <%= character_img(combo) %>
+      <p>Damage: <%= combo.damage %></p>
+      <p>Difficulty: <%= combo.difficulty %></p>
+      <p>Command: </p>
+      <p><%= combo.command %></p>
+      <button type="button" class="btn black-background btn-sm">
+        <p><%= link_to "Click to View Combo", combo_path(combo) %></p>
+      </button>
+      <hr>
+      <div class="posted">
+        Posted by <%= combo.user.name %><br>
+        on <%= combo.created_at.localtime.strftime("%m/%d/%Y" " at %I:%M%p") %>
+      </div>
+      <hr>
+      <div class="col-xs-12">
+      </div>
+    </div>
+    <% end %>
   </div>
-
-
-
 </div>
-</div>
-
 
 

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-before_action :authorize, except: [:index, :show, :new, :create]
+before_action :authorize, except: [:new, :create]
 
   def index
     @user = User.all
@@ -8,6 +8,7 @@ before_action :authorize, except: [:index, :show, :new, :create]
 
   def show
     @user = User.find(params[:id])
+    redirect_to combos_path, alert: 'Only the original User can perform this action' if current_user != @user
   end
 
   def new

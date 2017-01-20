@@ -5,41 +5,20 @@
     <div class="panel-body main">
       <ul>
       <div class="info col-md-3">
-
-    <%= character_img(@combo) %>
-
-      <%# if  @combo.character == "Ryu" %>
-        <%#= image_tag 'http://i.imgur.com/ycyvEaM.png', :class => "style_image" %>
-      <%# elsif @combo.character == "Ken" %>
-        <%#= image_tag 'http://i.imgur.com/mo7Bgq1.jpg', :class => "style_image" %>
-      <%# elsif @combo.character == "Zangief" %>
-        <%#= image_tag 'http://i.imgur.com/Kt1VDwa.png', :class => "style_image" %>
-      <%# elsif @combo.character == "M. Bison" %>
-        <%#= image_tag 'http://i.imgur.com/jRZ3BSx.png', :class => "style_image" %>
-      <%# elsif @combo.character == "Chun-Li" %>
-        <%#= image_tag 'http://i.imgur.com/IxFrHbU.jpg', :class => "style_image" %>
-      <%# elsif @combo.character == "Dhalsim" %>
-        <%#= image_tag 'http://i.imgur.com/n63vS1Z.png', :class => "style_image" %>
-      <%# elsif @combo.character == "Vega" %>
-        <%#= image_tag 'http://i.imgur.com/rIkEq8b.jpg', :class => "style_image" %>
-      <%# end %>
-
-
-      <p><%= @combo.character %></p>
-      <p>Damage:   <%= @combo.damage %></p>
-      <p>Difficulty:   <%= @combo.difficulty %></p>
-      <br>
-      <p>Command:</p>
-      <p><%= @combo.command %></p>
-    </div>
+        <%= character_img(@combo) %>
+        <p><%= @combo.character %></p>
+        <p>Damage:   <%= @combo.damage %></p>
+        <p>Difficulty:   <%= @combo.difficulty %></p>
+        <br>
+        <p>Command:</p>
+        <p><%= @combo.command %></p>
+      </div>
 
       <% if @combo.image.file? %>
         <%= image_tag(@combo.image.url, :class => "style_gif") %>
       <% else %>
         &nbsp;
       <% end %>
-
-      <%#= image_tag(@combo.image.url, :class => "style_gif") %>
       </ul>
 
       <div class="posted">
@@ -51,7 +30,7 @@
         <p><%= link_to "Edit this Combo", edit_combo_path(@combo) %></p>
         <br>
         <button type="button" class="btn black-background btn-sm">
-        <%= link_to "DELETE THIS COMBO", combo_path, method: :delete, data: { confirm: "Are you sure you want to delete this Combo?"} %>
+          <%= link_to "DELETE THIS COMBO", combo_path, method: :delete, data: { confirm: "Are you sure you want to delete this Combo?"} %>
         </button>
       <% end %>
 
@@ -79,9 +58,7 @@
 
       <div class="comment_form">
         <% if current_user %>
-        <%#= link_to "Add Comment", new_combo_comment_path(combo_id: @combo.id) %>
         <%= form_for [@combo, @comment] do |f| %>
-        <%#= f.label 'new comment' %>
         <%= f.text_area :content, placeholder: "Type comment here..." %><br>
         <%= f.submit 'submit new comment' %>
         <% end %>
@@ -102,8 +79,8 @@
   <br>
   <br>
   <button type="button" class="btn black-background btn-md">
-<%= link_to "Go back to all Combos", combos_path %>
-</button>
+    <%= link_to "Go back to all Combos", combos_path %>
+  </button>
 </div>
 
 
