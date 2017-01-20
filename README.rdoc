@@ -24,10 +24,14 @@ Users can upload and share combos with others, leave comments, and favorite indi
 
 Technologies Used:
 
-Ruby on Rails<br>
-Boostrap<br>
-Heroku<br>
-Paperclip<br>
+Ruby on Rails
+
+Boostrap
+
+Heroku
+
+Paperclip
+
 
 
 Instructions:
