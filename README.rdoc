@@ -1,8 +1,9 @@
- #Street Fighter V Dojo
+Street Fighter V Dojo
 
 https://sfvdojo.herokuapp.com/
 
-![game screen](http://i.imgur.com/P2UUP3M.jpg)
+
+(http://i.imgur.com/P2UUP3M.jpg)
 
 This app is a database for the video game Street Fighter V. The purpose of this app is an organized place for people to share combos that they discovered in-game.
 Searching online for this information, you would uncover either long lists of inputs or long Youtube vids.
@@ -10,6 +11,7 @@ I created this app to allow people to pick and choose specific combos to learn a
 Users can upload and share a combo with others, as well as leave comments.
 
 Technologies Used:
+
 Ruby on Rails
 Boostrap
 Heroku

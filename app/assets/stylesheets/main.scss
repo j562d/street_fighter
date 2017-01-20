@@ -13,12 +13,6 @@ body {
   color: white;
 }
 
-.filter {
-  color: pink;
-  margin-right: 50px;
-}
-
-
 .dropdown {
 display: inline-block;
 }
@@ -119,9 +113,23 @@ display: block!important;
 }
 
 .col-xs-12 {
-  height: 70px;
+  height: 20px;
 }
 
-#column-wrap {
-    overflow: hidden;
+.new_button {
+  text-align: left;
+  float: left;
+  margin-bottom: 0px;
+}
+
+.sorted {
+  text-align: right;
+}
+
+.filter {
+  background-color: white;
+}
+
+sorted_fav {
+  text-align: left;
 }

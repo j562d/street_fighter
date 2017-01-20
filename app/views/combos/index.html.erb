@@ -1,17 +1,18 @@
 
 <div class="container">
-
   <div class="panel-heading sorted">
-    <button type="button" class="btn black-background btn-lg">
-      <%= link_to "Post a New Combo", new_combo_path%>
-    </button>
+    <div class="new_button">
+      <button type="button" class="btn black-background btn-lg">
+        <%= link_to "Post a New Combo", new_combo_path%>
+      </button>
+    </div>
     <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+    <button class="btn dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown">
       SORT
     </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><%= link_to "DAMAGE low to high", :sort => 'Damage' %></li>
-        <li><%= link_to "DAMAGE high to low", :sort => 'Damage DESC' %></li>
+        <li><%= link_to "DAMAGE ⇧", :sort => 'Damage' %></li>
+        <li><%= link_to "DAMAGE ⇩", :sort => 'Damage DESC' %></li>
       </div>
     </div>
   </div>
