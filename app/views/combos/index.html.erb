@@ -5,7 +5,7 @@
     <%= link_to "Post a New Combo", new_combo_path%>
     </button>
     <div class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown">
+      <a class="dropdown-toggle filter" data-toggle="dropdown">
       <div class="filter">SORT
       <span class="caret"></span></a>
       <ul class="dropdown-menu dropdown-menu-center">
@@ -20,7 +20,7 @@
   <div class="panel-body main">
     <ul>
       <% @combos.order("created_at desc").each do |combo| %>
-        <%= div_for combo, :class => "col-sm-3" do %>
+        <%= div_for combo, :class => "col-md-3" do %>
 
         <p class="title"><%= combo.character %></p>
             <%= character_img(combo) %>
@@ -38,7 +38,6 @@
           Posted by <%= combo.user.name %><br>
           on <%= combo.created_at.localtime.strftime("%m/%d/%Y" " at %I:%M%p") %>
         </div>
-
         <hr>
         <% end %>
       <% end %>
