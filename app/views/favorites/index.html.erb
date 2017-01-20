@@ -9,7 +9,7 @@
   <div class="panel-body main">
     <ul>
     <% @favorites.order("created_at desc").each do |favorite| %>
-    <%= div_for favorite, :class => "col-md-3" do %>
+    <%= div_for favorite, :class => "col-md-6" do %>
     <p class="title"><%= favorite.combo.character %></p>
     <%= character_img_fav(favorite) %>
     <p>Damage: <%= favorite.combo.damage %></p>

@@ -1,6 +1,8 @@
-<h1> Street Fighter V Dojo </h1>
+ #Street Fighter V Dojo
 
 https://sfvdojo.herokuapp.com/
+
+![game screen](http://i.imgur.com/P2UUP3M.jpg)
 
 This app is a database for the video game Street Fighter V. The purpose of this app is an organized place for people to share combos that they discovered in-game.
 Searching online for this information, you would uncover either long lists of inputs or long Youtube vids.
