@@ -19,7 +19,7 @@
 
   <div class="panel-body main">
     <% @combos.order("created_at desc").each do |combo| %>
-    <div class="col-md-6 col-sm-3 ">
+    <div class="col-md-6 col-sm-6 ">
       <p class="title"><%= combo.character %></p>
       <%= character_img(combo) %>
       <p>Damage: <%= combo.damage %></p>
