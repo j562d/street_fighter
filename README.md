@@ -1,4 +1,4 @@
-#Project 2
+# Project 2
 
 https://sfvdojo.herokuapp.com/
 
@@ -14,7 +14,7 @@ The game requires practice and repetition, and so easy accesss to specific moves
 Users can upload and share combos with others, leave comments, and favorite individual combos.
 
 
-##Technologies Used
+## Technologies Used
 Ruby on Rails
 <BR>
 Boostrap
@@ -27,7 +27,7 @@ HTML
 <BR>
 CSS
 
-##Getting Started
+## Getting Started
 Users who don't sign-up for an account can only view combos.
 Signing up will allow users access to all of the app's features.
 They can create a combo to share, providing information such as: character, damage, command, and a .gif
@@ -35,7 +35,7 @@ They can also leave comments on any combo.
 Users can also favorite combos that they like, so they can have easy access to them.
 
 
-##Next Steps
+## Next Steps
 Add "Follows"<br>
 Add "Likes"<br>
 Add replies to comments <br>
