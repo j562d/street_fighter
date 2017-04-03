@@ -1,5 +1,5 @@
 .navbar-brand {
-  background-color: rgba(0,0,0, 1)
+  background-color: rgba(0,0,0, 1);
 }
 
 h2 {
@@ -91,10 +91,10 @@ label {
     clear: left;
 }
 
-.navbar-nav {
-  padding-left:50px;
-  padding-right:50px;
-}
+// .navbar-nav {
+//   padding-left:50px;
+//   padding-right:50px;
+// }
 
 .info {
   float: left;
@@ -109,9 +109,9 @@ label {
   background-color: white;
 }
 
-.navbar-collapse.collapse {
-display: block!important;
-}
+// .navbar-collapse.collapse {
+// display: block!important;
+// }
 
 .col-xs-12 {
   height: 20px;
@@ -149,3 +149,7 @@ display: block!important;
     background-size: cover;
 }
 
+.mobile {
+  background-color: rgba(0,0,0, .5);
+  margin-top: -80px;
+}
