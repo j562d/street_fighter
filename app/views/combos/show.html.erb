@@ -13,13 +13,15 @@
         <p>Command:</p>
         <p><%= @combo.command %></p>
       </div>
+      </ul>
+
 
       <% if @combo.image.file? %>
         <%= image_tag(@combo.image.url, :class => "style_gif") %>
       <% else %>
         &nbsp;
       <% end %>
-      </ul>
+
 
       <div class="posted">
         Posted by <%= @combo.user.name %>
@@ -67,6 +69,7 @@
     </div>
   </div>
 
+  <div class="buttons">
   <% if current_user %>
     <button type="button" class="btn btn-success">
       <%= link_to "Favorite",   favorite_combo_path(@combo, type: "favorite"), method: :put %>
@@ -81,6 +84,7 @@
   <button type="button" class="btn black-background btn-md">
     <%= link_to "Go back to all Combos", combos_path %>
   </button>
+  </div>
 </div>
 
 

@@ -1,8 +1,10 @@
 class CombosController < ApplicationController
 
+  layout false, only: [:landing]
+
   before_action :set_combo, only: [:show, :edit, :update, :destroy, :favorite]
 
-  before_action :authorize, except: [:index, :show]
+  before_action :authorize, except: [:index, :show, :landing]
 
   def favorite
     type = params[:type]
